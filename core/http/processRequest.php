@@ -19,7 +19,7 @@ class processRequest
         echo "name ".$controller_name;
         echo '<br>';
         echo "method ".$controller_method;
-        $controller_name::$controller_method();
+        //$controller_name::$controller_method();
     }
     //this function matches the request to the correct controller
     public static function getRequestedRoute()
