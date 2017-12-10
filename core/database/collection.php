@@ -3,6 +3,7 @@ namespace database;
 abstract class collection
 {
     //factory to make model
+//factory to make model
     static public function create()
     {
         $model = new static::$modelName;
