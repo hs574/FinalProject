@@ -18,6 +18,7 @@ class dbConn
         }
     }
     // get connection function. Static method - accessible without instantiation
+// get connection function. Static method - accessible without instantiation
     public static function getConnection()
     {
         //Guarantees single instance, if no connection object exists then create one.
