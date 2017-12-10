@@ -16,6 +16,7 @@ class homepagecontroller extends http\controller
         $templateData['site_name'] = 'Project 2';
 //template data contains what will show up in the $data variable in the homepage template
 //the name of the template 'homepage' becomes 'homepage.php' in the pages directory
+//the name of the template 'homepage' becomes 'homepage.php' in the pages directory
         self::getTemplate('homepage', $templateData);
     }
     public static function create()
