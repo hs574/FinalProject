@@ -87,25 +87,50 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
     </div>
-    <div class="col-sm-8 text-center">
-<body>
+    <div class="col-sm-8 text-center"> 
+    <h3> Enter Task Details </h3>
+    
+<form action="index.php?page=tasks&action=store&id=" method="post" id="form1" class = "form-inline">
 
-<?php
-$text='';
-$text.='<h2>Pending Tasks</h2><br>';
-$text.='<a href="index.php?page=tasks&action=create"><span class="glyphicon glyphicon-plus">Create New Task</span></a>';
+<div class = "form-group">
+<label>Owner Email-</label>
+<input type="text" class="form-control" name="owneremail" value="<?php session_start(); echo $_SESSION["email"]; ?>">
+</div>
+<br><br>
 
+<div class = "form-group">
+<label>Owner ID-</label>
+<input type="text" class="form-control" name="ownerid" value="<?php echo $_SESSION["userID"]; ?>">
+</div>
+<br><br>
 
-if($data==FALSE){
-  $text.='<br>No records found';
-  $text.='</center>';
-  echo $text;
-}
-else{
-$text.=utility\htmlTable::genarateTableFromMultiArray($data);
-echo $text;
-}
-?>
+<?php date_default_timezone_set("America/New_York"); ?>
+<div class = "form-group">
+<label>Created Date-</label>
+<input type="text" class="form-control" name="createddate" value="<?php echo date("Y-m-d").' '.date("h:i:sa"); ?>"readonly>
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Due Date-</label>
+<input type="text" class="form-control" name="duedate" value="">
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Message-</label>
+<input type="text" class="form-control" name="message" value="">
+</div>
+<br><br>
+
+<div class = "form-group">
+<label>Is Done-</label>
+<input type="text" class="form-control" name="isdone" value="">
+</div>
+<br><br>
+
+<button type="submit" class="btn btn-primary" form="form1" value="create">Create</button>
+</form>
 
 </div>
 
@@ -117,7 +142,6 @@ echo $text;
 <footer class="container-fluid text-center">
   <p>Web System Development</p>
 </footer>
-
 
 <script src="js/scripts.js"></script>
 </body>

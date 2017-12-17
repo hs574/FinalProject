@@ -40,20 +40,14 @@
       .row.content {height:auto;} 
     }
     
-    .glyphicon {
-    height:42px;
-    font-size: 18px;
-}
-
-    label{
+      label{
       width:100px;
     }
   </style>
 </head>
 
 
-<body text-align:center>
-
+<body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -66,75 +60,54 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      
-      <li><div>
-        <form action="index.php?page=accounts&action=show" method="POST">
-        <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
-        </form></div></li>
         
-        <li><div>
-        <form action="index.php?page=accounts&action=logout" method="POST">
-        <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
-        </form></div></li>
       </ul>
+      
     </div>
   </div>
 </nav>
-
+  
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
     </div>
     <div class="col-sm-8 text-center"> 
-    <h3> Details </h3>
-<form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?>" method="post" class = "form-inline">
-    
-    <div class = "form-group">
+
+<h3>Register</h3>
+<form action="index.php?page=accounts&action=store" method="post" id="form1" class = "form-inline">
+    <div class = "form-group" align="center">
     <label>First name-</label>
-    <input type="text" class="form-control" name="fname" value="<?php echo $data->fname; ?>"readonly>
+    <input type="text" class="form-control" name="fname" value="" required><br>
     </div><br><br>
-
-    <div class = "form-group" align="center">
-    <label>Last  name-</label>
-    <input type="text" class="form-control" name="lname" value="<?php echo $data->lname; ?>"readonly>
+    <div class = "form-group">
+    <label>Last name-</label>
+    <input type="text" class="form-control" name="lname" value="" required><br>
     </div><br><br>
-    
-    <div class = "form-group" align="center">
-    <label>E-mail  ID-</label>
-    <input type="text" class="form-control" name="email" value="<?php echo $data->email; ?>"readonly>
+    <div class = "form-group">
+    <label>Email ID-</label>
+    <input type="email" class="form-control" name="email" value=""><br>
     </div><br><br>
-    
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Phone No-</label>
-    <input type="text" class="form-control" name="phone" value="<?php echo $data->phone; ?>"readonly>
+    <input type="text" class="form-control" name="phone" value=""><br>
     </div><br><br>
-    
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Birthday-</label>
-    <input type="text" class="form-control" name="birthday" value="<?php echo $data->birthday; ?>"readonly>
+    <input type="text" class="form-control" name="birthday" value=""><br>
     </div><br><br>
-    
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Gender-</label>
-    <input type="text" class="form-control" name="gender" value="<?php echo $data->gender; ?>"readonly>
-    </div>
-    <br>
-    <br>
-    
-    <input type="submit" class="btn btn-primary" value="Edit">
-    <br>
-    <br>
+    <input type="text" class="form-control" name="gender" value=""><br>
+    </div><br><br>
+    <div class = "form-group">
+    <label>Password-</label>
+    <input type="password" class="form-control" name="password" value="" required><br>
+    </div><br><br>
+    <button type="submit" class="btn btn-primary" form="form1" value="Submit">Submit</button>
 </form>
 
-
-<form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" class="btn btn-primary" form="form1" value="delete">Delete</button>
-</form>
 </div>
-
-<div class="col-sm-2 sidenav">
+    <div class="col-sm-2 sidenav">
     </div>
   </div>
 </div>
@@ -142,8 +115,6 @@
 <footer class="container-fluid text-center">
   <p>Web System Development</p>
 </footer>
-
-
 
 <script src="js/scripts.js"></script>
 </body>
