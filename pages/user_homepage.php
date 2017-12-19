@@ -19,17 +19,12 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
+     /* padding-top: 20px;
+      background-color: #f1f1f1;*/
       height: 100%;
     }
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+   
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -44,13 +39,28 @@
     height:42px;
     font-size: 18px;
 }
+.glyphicon1 {
+    color: white;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    padding: 10px 43px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 14px;
+    right:426px; //important//
+    top: 173px !important;
+    
+
+
+    
+}
   </style>
 </head>
 
 
 <body>
 
-<nav class="navbar navbar-inverse">
+
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -67,12 +77,12 @@
       
       <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
-        <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
+        <button type="submit" class="glyphicon1 glyphicon-user">Your Profile</button>
         </form></div></li>
         
         <li><div>
         <form action="index.php?page=accounts&action=logout" method="POST">
-        <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
+        <button type="submit" class="glyphicon1 glyphicon-log-out">Logout</button>
         </form></div></li>
       </ul>
     </div>
@@ -93,9 +103,7 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Web System Development</p>
-</footer>
+
 
 <script src="js/scripts.js"></script>
 </body>

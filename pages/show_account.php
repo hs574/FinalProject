@@ -19,17 +19,12 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
+     /* padding-top: 20px;
+      background-color: #f1f1f1;*/
       height: 100%;
     }
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
+   
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -54,7 +49,7 @@
 
 <body text-align:center>
 
-<nav class="navbar navbar-inverse">
+
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -139,9 +134,7 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Web System Development</p>
-</footer>
+
 
 
 
